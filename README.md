@@ -78,17 +78,17 @@ return (
 }
 
 5. Run the Application
-	1.	In the root directory of your React project, install the dependencies if you haven’t already:
+	1. In the root directory of your React project, install the dependencies if you haven’t already:
 
 npm install
 
 
-	2.	Start the development server:
+	2. Start the development server:
 
 npm run dev
 
 
-	3.	Open your web browser and navigate to http://localhost:5173. You should see your Unity WebGL content rendered within your React application.
+	3. Open your web browser and navigate to http://localhost:5173. You should see your Unity WebGL content rendered within your React application.
 
 Project Structure Example
 
