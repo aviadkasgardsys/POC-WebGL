@@ -1,87 +1,112 @@
-# Welcome to React Router!
+# Unity WebGL Integration with React
 
-A modern, production-ready template for building full-stack React applications using React Router.
+This project demonstrates how to integrate a Unity WebGL build into a React application using the `react-unity-webgl` package.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Prerequisites
 
-## Features
+- A Unity project set up to build for WebGL.
+- Node.js and npm (or yarn) installed.
+- A React project (this setup assumes you are using [Create React App](https://create-react-app.dev/) or a similar setup).
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Setup Instructions
 
-## Getting Started
+### 1. Build the Unity Project
 
-### Installation
+1. Open your Unity project.
+2. Go to **File > Build Settings...** and select **WebGL** as the platform.
+3. Click **Build** and choose an output folder (e.g., `Build`).
 
-Install the dependencies:
+### 2. Extract the GZ Files
 
-```bash
+The Unity WebGL build output folder may contain several `.gz` files. These gzipped files are automatically handled by your web server if properly configured. However, if you need to extract these files manually:
+
+1. Locate the `.gz` files inside your `Build` folder.
+2. Use an extraction tool (e.g., 7-Zip on Windows or the built-in tools on macOS/Linux) to unzip these files.
+3. Verify that you now have the extracted `.data`, `.js`, and `.wasm` files.
+
+### 3. Copy the Build Folder into the Public Directory
+
+1. In your React project, locate the `public` folder.
+2. Copy the entire `Build` folder (with the extracted files) into your React app’s `public` directory. The structure should look like this:
+
+your-react-app/
+├── public/
+│ └── Build/
+│ ├── FirstWebGL.loader.js
+│ ├── FirstWebGL.data
+│ ├── FirstWebGL.framework.js
+│ └── FirstWebGL.wasm
+└── app/
+└── components/
+└── UnityGame.tsx
+
+### 4. Modify the UnityGame Component
+
+Make sure your `UnityGame.tsx` file (located in `app/components`) points to the correct Unity WebGL build files. Below is an example implementation:
+
+```tsx
+import React, { useEffect, useState } from "react";
+import { Unity, useUnityContext } from "react-unity-webgl";
+
+export function UnityGame() {
+// Ensure rendering only happens in the browser.
+const [isClient, setIsClient] = useState(false);
+
+useEffect(() => {
+ setIsClient(true);
+}, []);
+
+// Update paths to match the copied build folder.
+const { unityProvider } = useUnityContext({
+ loaderUrl: "Build/FirstWebGL.loader.js",
+ dataUrl: "Build/FirstWebGL.data",
+ frameworkUrl: "Build/FirstWebGL.framework.js",
+ codeUrl: "Build/FirstWebGL.wasm",
+});
+
+if (!isClient) {
+ return null;
+}
+
+return (
+ <div style={{ width: "100%", height: "1000px" }}>
+   <Unity unityProvider={unityProvider} />
+ </div>
+);
+}
+
+5. Run the Application
+	1.	In the root directory of your React project, install the dependencies if you haven’t already:
+
 npm install
-```
 
-### Development
 
-Start the development server with HMR:
+	2.	Start the development server:
 
-```bash
 npm run dev
-```
 
-Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+	3.	Open your web browser and navigate to http://localhost:5173. You should see your Unity WebGL content rendered within your React application.
 
-Create a production build:
+Project Structure Example
 
-```bash
-npm run build
-```
+Below is an example of what your project structure might look like with the updated location for the UnityGame component:
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
+your-react-app/
+├── public/
+│   ├── index.html
+│   └── Build/
+│       ├── FirstWebGL.loader.js
+│       ├── FirstWebGL.data
+│       ├── FirstWebGL.framework.js
+│       └── FirstWebGL.wasm
+├── app/
+│   └── components/
+│       └── UnityGame.tsx
+├── src/
+│   ├── App.tsx
+│   └── index.tsx
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+└── README.md
+.
 ```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
