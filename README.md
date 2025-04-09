@@ -46,7 +46,7 @@ your-react-app/
 
 Make sure your `UnityGame.tsx` file (located in `app/components`) points to the correct Unity WebGL build files. Below is an example implementation:
 
-```tsx
+````tsx
 import React, { useEffect, useState } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
@@ -78,9 +78,14 @@ return (
 }
 
 5. Run the Application
-	1. In the root directory of your React project, install the dependencies if you haven’t already:
 
-npm install
+
+	1. In the root directory of your React project, install the dependencies if you haven’t already:
+        ```bash
+        npm install
+        ```
+
+
 
 
 	2. Start the development server:
@@ -111,4 +116,4 @@ your-react-app/
 ├── package.json
 └── README.md
 .
-```
+````
