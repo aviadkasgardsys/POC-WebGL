@@ -116,7 +116,3 @@ your-react-app/
 └── README.md
 
 ```
-
-```
-
-```
