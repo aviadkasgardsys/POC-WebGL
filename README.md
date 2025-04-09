@@ -97,6 +97,7 @@ export function UnityGame() {
 
 Below is an example of what your project structure might look like with the updated location for the UnityGame component:
 
+```tsx
 your-react-app/
 ├── public/
 │ ├── index.html
@@ -113,6 +114,8 @@ your-react-app/
 │ └── index.tsx
 ├── package.json
 └── README.md
+
+```
 
 ```
 
