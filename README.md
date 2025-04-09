@@ -47,31 +47,17 @@ your-react-app/
 Make sure your `UnityGame.tsx` file (located in `app/components`) points to the correct Unity WebGL build files. Below is an example implementation:
 
 ```tsx
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
-
 export function UnityGame() {
-  // Ensure rendering only happens in the browser.
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Update paths to match the copied build folder.
   const { unityProvider } = useUnityContext({
     loaderUrl: "Build/FirstWebGL.loader.js",
     dataUrl: "Build/FirstWebGL.data",
     frameworkUrl: "Build/FirstWebGL.framework.js",
     codeUrl: "Build/FirstWebGL.wasm",
   });
-
-  if (!isClient) {
-    return null;
-  }
-
   return (
-    <div style={{ width: "100%", height: "1000px" }}>
+    <div style={{ width: "100%", height: "100%" }}>
       <Unity unityProvider={unityProvider} />
     </div>
   );

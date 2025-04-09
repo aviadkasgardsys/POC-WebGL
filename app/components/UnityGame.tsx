@@ -8,7 +8,7 @@ export function UnityGame() {
     codeUrl: "Build/FirstWebGL.wasm",
   });
   return (
-    <div style={{ width: "100%", height: "1000px" }}>
+    <div style={{ width: "100%", height: "100%" }}>
       <Unity unityProvider={unityProvider} />
     </div>
   );
