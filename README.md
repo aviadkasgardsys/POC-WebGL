@@ -78,21 +78,22 @@ export function UnityGame() {
 }
 ```
 
-5.  Run the Application
+### 5. Run the Application
 
-        1. In the root directory of your React project, install the dependencies if you haven’t already:
-            ```bash
-            npm install
-            ```
+1. In the root directory of your React project, install the dependencies if you haven’t already:
 
-        2. Start the development server:
-            ```bash
-            npm run dev
-            ```
+   ```bash
+   npm install
+   ```
 
-        3. Open your web browser and navigate to [http://localhost:5173](http://localhost:5173). You should see your Unity WebGL content rendered within your React application.
+2. Start the development server:
 
-    Project Structure Example
+   ```bash
+   npm run dev
+   ```
+
+3. Open your web browser and navigate to [http://localhost:5173](http://localhost:5173). You should see your Unity WebGL content rendered within your React application.
+   Project Structure Example
 
 Below is an example of what your project structure might look like with the updated location for the UnityGame component:
 
