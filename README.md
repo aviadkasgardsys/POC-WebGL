@@ -29,6 +29,7 @@ The Unity WebGL build output folder may contain several `.gz` files. These gzipp
 1. In your React project, locate the `public` folder.
 2. Copy the entire `Build` folder (with the extracted files) into your React app’s `public` directory. The structure should look like this:
 
+```tsx
 your-react-app/
 ├── public/
 │ └── Build/
@@ -39,6 +40,7 @@ your-react-app/
 └── app/
 └── components/
 └── UnityGame.tsx
+```
 
 ### 4. Modify the UnityGame Component
 
