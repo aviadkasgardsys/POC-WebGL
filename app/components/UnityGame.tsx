@@ -2,20 +2,18 @@ import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 export function UnityGame() {
   const { unityProvider } = useUnityContext({
-    loaderUrl: "Build/FirstWebGL.loader.js",
-    dataUrl: "Build/FirstWebGL.data",
-    frameworkUrl: "Build/FirstWebGL.framework.js",
-    codeUrl: "Build/FirstWebGL.wasm",
+    loaderUrl: "Build/SwarmUI.loader.js",
+    dataUrl: "Build/SwarmUI.data",
+    frameworkUrl: "Build/SwarmUI.framework.js",
+    codeUrl: "Build/SwarmUI.wasm",
   });
   return (
-    <div style={{ width: "100%", height: "100%" }}>
-      <Unity
-        unityProvider={unityProvider}
-        style={{
-          width: "100vw",
-          height: "100vh",
-        }}
-      />
-    </div>
+    <Unity
+      unityProvider={unityProvider}
+      style={{
+        width: "80vw",
+        height: "80vh",
+      }}
+    />
   );
 }
