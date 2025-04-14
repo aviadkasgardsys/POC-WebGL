@@ -1,0 +1,474 @@
+{
+  "dateCreated": "2025-03-20T11:42:03.9477235+02:00",
+  "simulationName": "tryLogs",
+  "simulationTime": 10,
+  "distanceBetweenDrones": 20.0,
+  "timeStep": 1.0,
+  "sliderValue": 1.0,
+  "simulationMode": 0,
+  "simulationMapMode": 0,
+  "droneStartPosition": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "droneSettings": [
+    {
+      "type": 0,
+      "quantity": 20,
+      "droneSize": 1.0,
+      "alias": "DroneA",
+      "droneFlightTime": 30,
+      "maxAltitude": 50,
+      "droneMaxSpeed": 20.0,
+      "droneAcceleration": 3.0,
+      "droneDeceleration": 3.0,
+      "climbingPace": 2.0,
+      "loweringRate": 2.0,
+      "exterminationRadius": 2.0,
+      "exterminationProbability": 0.9,
+      "exterminationTime": 30.0,
+      "horizontalAngle": 60,
+      "verticalAngle": 45,
+      "droneDetectionRadius": 200,
+      "droneDetectionHeight": 20,
+      "pestDetectionDistance": 100,
+      "lostFollowProbability": 0.0,
+      "maxComRange": 0,
+      "maxNoiseRadius": 0.0,
+      "maxNoiseDistance": 200.0,
+      "minNoiseDistance": 0.0,
+      "detectionProbability": 1.0,
+      "malfunctionProbability": 0.0,
+      "accurateRadiusFlyTo": 1.0,
+      "closeUpAbility": 1,
+      "name": "",
+      "hideFlags": 0
+    },
+    {
+      "type": 1,
+      "quantity": 0,
+      "droneSize": 0.3,
+      "alias": "DroneB",
+      "droneFlightTime": 10,
+      "maxAltitude": 1000,
+      "droneMaxSpeed": 20.0,
+      "droneAcceleration": 3.0,
+      "droneDeceleration": 3.0,
+      "climbingPace": 2.0,
+      "loweringRate": 2.0,
+      "exterminationRadius": 0.5,
+      "exterminationProbability": 0.9,
+      "exterminationTime": 30.0,
+      "horizontalAngle": 60,
+      "verticalAngle": 45,
+      "droneDetectionRadius": 200,
+      "droneDetectionHeight": 20,
+      "pestDetectionDistance": 100,
+      "lostFollowProbability": 0.0,
+      "maxComRange": 0,
+      "maxNoiseRadius": 0.0,
+      "maxNoiseDistance": 200.0,
+      "minNoiseDistance": 200.0,
+      "detectionProbability": 1.0,
+      "malfunctionProbability": 0.0,
+      "accurateRadiusFlyTo": 0.2,
+      "closeUpAbility": 0,
+      "name": "",
+      "hideFlags": 0
+    },
+    {
+      "type": 2,
+      "quantity": 0,
+      "droneSize": 0.5,
+      "alias": "DroneC",
+      "droneFlightTime": 20,
+      "maxAltitude": 1000,
+      "droneMaxSpeed": 20.0,
+      "droneAcceleration": 3.0,
+      "droneDeceleration": 3.0,
+      "climbingPace": 2.0,
+      "loweringRate": 2.0,
+      "exterminationRadius": 1.0,
+      "exterminationProbability": 0.9,
+      "exterminationTime": 30.0,
+      "horizontalAngle": 60,
+      "verticalAngle": 45,
+      "droneDetectionRadius": 200,
+      "droneDetectionHeight": 20,
+      "pestDetectionDistance": 100,
+      "lostFollowProbability": 0.0,
+      "maxComRange": 0,
+      "maxNoiseRadius": 0.0,
+      "maxNoiseDistance": 200.0,
+      "minNoiseDistance": 30.0,
+      "detectionProbability": 1.0,
+      "malfunctionProbability": 0.0,
+      "accurateRadiusFlyTo": 0.2,
+      "closeUpAbility": 0,
+      "name": "",
+      "hideFlags": 0
+    },
+    {
+      "type": 3,
+      "quantity": 0,
+      "droneSize": 1.5,
+      "alias": "DroneD",
+      "droneFlightTime": 45,
+      "maxAltitude": 1000,
+      "droneMaxSpeed": 20.0,
+      "droneAcceleration": 3.0,
+      "droneDeceleration": 3.0,
+      "climbingPace": 2.0,
+      "loweringRate": 2.0,
+      "exterminationRadius": 5.0,
+      "exterminationProbability": 0.9,
+      "exterminationTime": 30.0,
+      "horizontalAngle": 60,
+      "verticalAngle": 45,
+      "droneDetectionRadius": 200,
+      "droneDetectionHeight": 20,
+      "pestDetectionDistance": 100,
+      "lostFollowProbability": 0.0,
+      "maxComRange": 0,
+      "maxNoiseRadius": 0.0,
+      "maxNoiseDistance": 200.0,
+      "minNoiseDistance": 30.0,
+      "detectionProbability": 1.0,
+      "malfunctionProbability": 0.0,
+      "accurateRadiusFlyTo": 0.2,
+      "closeUpAbility": 0,
+      "name": "",
+      "hideFlags": 0
+    }
+  ],
+  "pestSettings": [
+    {
+      "type": 0,
+      "model": 0,
+      "alias": "Static",
+      "size": 0.5,
+      "speed": 0.0,
+      "detectionRange": 0,
+      "score": 0,
+      "name": "",
+      "hideFlags": 0
+    },
+    {
+      "type": 2,
+      "model": 0,
+      "alias": "Roaming",
+      "size": 0.3,
+      "speed": 2.0,
+      "detectionRange": 0,
+      "score": 0,
+      "name": "",
+      "hideFlags": 0
+    },
+    {
+      "type": 1,
+      "model": 0,
+      "alias": "Evasive",
+      "size": 1.2,
+      "speed": 5.0,
+      "detectionRange": 50,
+      "score": 0,
+      "name": "",
+      "hideFlags": 0
+    }
+  ],
+  "peopleSettings": [
+    {
+      "type": 0,
+      "alias": "Static",
+      "size": 0.0,
+      "speed": 10.0,
+      "detectionRange": 50,
+      "score": 0,
+      "name": "People1",
+      "hideFlags": 0
+    },
+    {
+      "type": 2,
+      "alias": "Romaing",
+      "size": 0.0,
+      "speed": 10.0,
+      "detectionRange": 50,
+      "score": 0,
+      "name": "People2",
+      "hideFlags": 0
+    },
+    {
+      "type": 1,
+      "alias": "Evasive",
+      "size": 0.0,
+      "speed": 10.0,
+      "detectionRange": 20,
+      "score": 0,
+      "name": "People3",
+      "hideFlags": 0
+    }
+  ],
+  "carSettings": [],
+  "pestsDetails": [
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    },
+    {
+      "pestType": 2,
+      "pestModel": 0,
+      "worldPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "routeWaypoints": [],
+      "index": 0,
+      "isLocked": false
+    }
+  ],
+  "peopleDetails": [],
+  "carDetails": [],
+  "boundries": {
+    "minimumX": 0.0,
+    "minimumZ": 0.0,
+    "maximumX": 0.0,
+    "maximumZ": 0.0
+  },
+  "coveragePercentageCapture": [
+    20,
+    40,
+    60
+  ],
+  "pestPercentageCapture": [
+    40,
+    60
+  ],
+  "enableDroneSelfNoise": false,
+  "totalComOutViolation": {}
+}
